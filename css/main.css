@@ -1811,10 +1811,12 @@ blockquote::before {
 .accordion {
   .accordion-item {
     border-bottom: 1px solid #717275;
+    
     button[aria-expanded='true'] {
       border-bottom: 0px solid #717275;
     }
   }
+  
   button {
     position: relative;
     display: block;
@@ -1827,18 +1829,23 @@ blockquote::before {
     border: none;
     background: none;
     outline: none;
-    &:hover, &:focus {
+    
+    &:hover,
+    &:focus {
       cursor: pointer;
       color: #9625d5;
+      
       &::after {
         cursor: pointer;
         color: #9625d5;
         border: 1px solid #9625d5;
       }
     }
+    
     .accordion-title {
       padding: 1em 1.5em 1em;
     }
+    
     .faqicon {
       display: inline-block;
       position: absolute;
@@ -1848,6 +1855,7 @@ blockquote::before {
       height: 22px;
       border: 1px solid;
       border-radius: 22px;
+      
       &::before {
         display: block;
         position: absolute;
@@ -1858,6 +1866,7 @@ blockquote::before {
         height: 2px;
         background: currentColor;
       }
+      
       &::after {
         display: block;
         position: absolute;
@@ -1870,13 +1879,13 @@ blockquote::before {
       }
     }
   }
+
   button[aria-expanded='true'] {
-    color: #717275;
-    .icon {
-      &::after {
-        width: 0;
-      }
+    color: #9625d5; 
+    .faqicon {
+      transform: rotate(45deg); 
     }
+    
     + .accordion-content {
       opacity: 1;
       max-height: 9em;
@@ -1884,18 +1893,53 @@ blockquote::before {
       will-change: opacity, max-height;
     }
   }
+
   .accordion-content {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
     transition: opacity 200ms linear, max-height 200ms linear;
     will-change: opacity, max-height;
+    
     p {
       font-size: 1rem;
       font-weight: 300;
-      margin: 2em ;
+      margin: 1.5em; 
     }
   }
+
+  @media (max-width: 768px) {
+    button {
+      padding: 1em 0.5em;
+    }
+
+    .accordion-content {
+      max-height: 6em;
+    }
+    
+    .accordion-title {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+/* Remove the blue outline on focus */
+.accordion-button:focus {
+  outline: none;
+  box-shadow: none; /* Prevent the blue shadow on focus */
+}
+
+/* Remove the blue color on hover and active states */
+.accordion-button:hover,
+.accordion-button:active {
+  color: #717275; /* Use your desired color */
+  background-color: transparent; /* Optional: Maintain transparent background */
+  border-color: transparent; /* Optional: Maintain no border */
+}
+
+.accordion-button:focus {
+  color: #717275; /* Match your text color */
+  background-color: transparent;
 }
 
 
