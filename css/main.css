@@ -264,7 +264,7 @@ strong {
   CUSTOM TEXT BOX               
 -----------------------------------------*/
 .custom-text-box {
-  background: var(--white-color);
+  /* background: var(--white-color); */
   border-radius: var(--border-radius-medium);
   margin-bottom: 24px;
   padding: 40px;
@@ -1063,7 +1063,7 @@ blockquote::before {
 
 
 .contact-form {
-  background: var(--section-bg-color);
+  /* background: var(--section-bg-color); */
   border-radius: var(--border-radius-small);
   padding: 40px;
 }
