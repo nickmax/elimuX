@@ -147,6 +147,12 @@
                                         <textarea class="form-control" id="message" name="message" rows="3"></textarea>
                                     </div>
 
+                                    <!-- Referral Link Field (Optional) -->
+                                    <div class="mb-3">
+                                        <label for="referralLink" class="form-label">Referral Link (Optional)</label>
+                                        <input type="text" class="form-control" id="referralLink" name="referralLink">
+                                    </div>
+
                                     <!-- Honeypot Spam Protection -->
                                     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
@@ -174,9 +180,12 @@
                                             const message = document
                                                 .getElementById('message')
                                                 .value;
+                                            const referralLink = document
+                                                .getElementById('referralLink')
+                                                .value; // Get referral link
 
                                             // Compose the personalized WhatsApp message
-                                            const whatsappMessage = `Hi ElimuX, my name is ${name}. Here are my details:\n\nEmail: ${email}\nPhone: ${phone}\nService I'm interested in: ${service}\nAdditional Information: ${message || 'No additional information provided.'}`;
+                                            const whatsappMessage = `Hi ElimuX, my name is ${name}. Here are my details:\n\nEmail: ${email}\nPhone: ${phone}\nService I'm interested in: ${service}\nAdditional Information: ${message || 'No additional information provided.'}\nReferral Link: ${referralLink || 'No referral link provided.'}`;
 
                                             // Encode the message for the URL
                                             const encodedMessage = encodeURIComponent(whatsappMessage);
@@ -205,7 +214,6 @@
                                                 });
                                         });
                                 </script>
-
                             </div>
                         </div>
                     </div>
