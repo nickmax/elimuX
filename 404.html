@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Page Not Found | ElimuX</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
+        <style>
+            .error-container {
+                min-height: 80vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .error-code {
+                font-size: 7rem;
+                font-weight: bold;
+                color: #9625d5;
+            }
+            .error-message {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+            .error-actions .btn {
+                margin: 0.5rem;
+                color: #9625d5;
+                border-color: #9625d5;
+                background-color:rgba(151, 37, 213, 0);
+                border-radius: 20px;
+                padding: 10px 20px;
+                transition: all 0.3s ease;
+                border-style: solid;
+            }
+            .error-logo {
+                max-width: 200px;
+                margin-bottom: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.svg" class="logo img-fluid" alt="ElimuX">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section_2">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section_3">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section_6">Contact</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link custom-btn custom-border-btn btn" href="enroll.html" target="_blank">ENROLL NOW</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="error-container">
+            <img src="images/favicon.svg" alt="ElimuX Logo" class="error-logo" loading="lazy">
+            <div class="error-code">404</div>
+            <div class="error-message">Oops! Page Not Found</div>
+            <p class="mb-4">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+            <div class="error-actions">
+                <a href="index.html" class="btn btn-primary">Go to Homepage</a>
+                <a href="enroll.html" class="btn btn-outline-primary">Explore Our Services</a>
+            </div>
+        </div>
+        <footer class="site-footer mt-auto">
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-5 col-12 d-flex flex-column flex-md-row justify-content-center align-items-center mx-auto text-center text-md-start">
+                            <p class="copyright-text mb-1 mb-md-0">
+                            Copyright © <span id="currentYear"></span> ElimuX
+                        </p>
+                            <p class="copyright-text mb-0">
+                            Site Made with ❤️ by 
+                            <a href="https://mathengeinc.com" target="_blank">MathengeInc.</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            document
+                .getElementById("currentYear")
+                .textContent = new Date().getFullYear();
+        </script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
