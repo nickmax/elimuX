@@ -1,4 +1,43 @@
-<section class="section-padding section-bg" id="section_4">
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Course Options & Schedule - ElimuX</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.svg" class="logo img-fluid" alt="ElimuX">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html#top">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="section-padding section-bg" id="schedule">
             <div class="container">
                 <h2>Course Options & Schedule</h2>
                 <table class="table table-striped">
@@ -24,58 +63,28 @@
                 </table>
             </div>
         </section>
-
-<section class="section-padding section-bg" id="section_4">
-            <div class="container">
-                <h2>Course Options & Schedule</h2>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Options</th>
-                            <th scope="col">Length</th>
-                            <th scope="col">Time</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Monday, Wednesday & Friday</td>
-                            <td>8-12 Weeks</td>
-                            <td>9.30am - 2.30pm</td>
-                        </tr>
-                        <tr>
-                            <td>Saturdays</td>
-                            <td>15 Weeks</td>
-                            <td>9.30am - 2.30pm</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <footer class="site-footer">
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-5 col-12 d-flex flex-column flex-md-row justify-content-center align-items-center mx-auto text-center text-md-start">
+                            <p class="copyright-text mb-1 mb-md-0">
+                            Copyright © <span id="currentYear"></span> ElimuX
+                        </p>
+                            <p class="copyright-text mb-0">
+                            Site Made with ❤️ by 
+                            <a href="https://mathengeinc.com" target="_blank">MathengeInc.</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-
-<section class="section-padding section-bg" id="section_4">
-    <div class="container">
-        <h2>Course Options & Schedule</h2>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Options</th>
-                    <th scope="col">Length</th>
-                    <th scope="col">Time</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Monday, Wednesday & Friday</td>
-                    <td>8-12 Weeks</td>
-                    <td>9.30am - 2.30pm</td>
-                </tr>
-                <tr>
-                    <td>Saturdays</td>
-                    <td>15 Weeks</td>
-                    <td>9.30am - 2.30pm</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    
-</section>
+        </footer>
+        <script>
+            document
+                .getElementById("currentYear")
+                .textContent = new Date().getFullYear();
+        </script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

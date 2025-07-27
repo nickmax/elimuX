@@ -17,7 +17,7 @@
         <meta property="og:title" content="Enroll Now - ElimuX College Consulting | Where Dreams Cross Borders">
         <meta property="og:description" content="Enroll today with ElimuX College Consulting and achieve your dreams of studying at top universities worldwide.">
         <meta property="og:image" content="images/sharing-image.jpg">
-        <meta property="og:url" content="elimux.com">
+        <meta property="og:url" content="https://elimux.co.ke/enroll.html">
         <meta property="og:type" content="website">
 
         <!-- Twitter Card Meta Tags -->
@@ -91,13 +91,13 @@
                             <a class="nav-link click-scroll" href="index.html#top">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_2">About</a>
+                            <a class="nav-link click-scroll" href="index.html#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_3">Services</a>
+                            <a class="nav-link click-scroll" href="index.html#services">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_6">Contact</a>
+                            <a class="nav-link click-scroll" href="index.html#contact">Contact</a>
                         </li>
 
                     </ul>
@@ -106,7 +106,7 @@
         </nav>
 
         <main>
-            <section class="section-padding section-bg" id="section_8">
+            <section class="section-padding section-bg" id="enroll">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -136,9 +136,9 @@
                                     <div class="mb-3">
                                         <label for="service" class="form-label">Which service are you interested in?</label>
                                         <select class="form-control" id="service" name="service" required>
-                                            <option value="One-on-One Consultation">Elimux Success Package</option>
-                                            <option value="Group Workshops">College Application Consulting</option>
-                                            <option value="Test Prep & Application Support">SAT Prep</option>
+                                            <option value="Elimux Success Package">Elimux Success Package</option>
+                                            <option value="College Application Consulting">College Application Consulting</option>
+                                            <option value="SAT Prep">SAT Prep</option>
                                         </select>
                                     </div>
 
@@ -221,20 +221,29 @@
             </section>
         </main>
 
-        <footer>
-            <div class="container text-center py-3">
-                <p>&copy; 2025 ElimuX College Consulting. All rights reserved.</p>
+        <footer class="site-footer">
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-5 col-12 d-flex flex-column flex-md-row justify-content-center align-items-center mx-auto text-center text-md-start">
+                            <p class="copyright-text mb-1 mb-md-0">
+                                Copyright © <span id="currentYear"></span> ElimuX
+                            </p>
+                            <p class="copyright-text mb-0">
+                                Site Made with ❤️ by 
+                                <a href="https://mathengeinc.com" target="_blank">MathengeInc.</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </footer>
-
+        <script>
+            document
+                .getElementById("currentYear")
+                .textContent = new Date().getFullYear();
+        </script>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 
 </html>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.sticky.js"></script>
-<script src="js/click-scroll.js"></script>
-<script src="js/counter.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/faq.js"></script>

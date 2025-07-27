@@ -1,37 +1,18 @@
-//jquery-click-scroll
-//by syamsul'isul' Arifin
+// click-scroll.js - universal smooth scroll for on-page anchors
 
-var sectionArray = [1, 2, 3, 4, 5, 6];
-
-$.each(sectionArray, function(index, value){
-          
-     $(document).scroll(function(){
-         var offsetSection = $('#' + 'section_' + value).offset().top - 90;
-         var docScroll = $(document).scrollTop();
-         var docScroll1 = docScroll + 1;
-         
-        
-         if ( docScroll1 >= offsetSection ){
-             $('.navbar-nav .nav-item .nav-link').removeClass('active');
-             $('.navbar-nav .nav-item .nav-link:link').addClass('inactive');  
-             $('.navbar-nav .nav-item .nav-link').eq(index).addClass('active');
-             $('.navbar-nav .nav-item .nav-link').eq(index).removeClass('inactive');
-         }
-         
-     });
-    
-    $('.click-scroll').eq(index).click(function(e){
-        var offsetClick = $('#' + 'section_' + value).offset().top - 90;
+$(document).ready(function () {
+  $(".click-scroll").on("click", function (e) {
+    var href = $(this).attr("href");
+    // Only intercept if it's an on-page anchor (starts with #)
+    if (href && href.startsWith("#")) {
+      var target = $(href);
+      if (target.length) {
         e.preventDefault();
-        $('html, body').animate({
-            'scrollTop':offsetClick
-        }, 300)
-    });
-    
-});
-
-$(document).ready(function(){
-    $('.navbar-nav .nav-item .nav-link:link').addClass('inactive');    
-    $('.navbar-nav .nav-item .nav-link').eq(0).addClass('active');
-    $('.navbar-nav .nav-item .nav-link:link').eq(0).removeClass('inactive');
+        // Adjust scroll offset for fixed navbar if needed (e.g., 90px)
+        var offset = target.offset().top - 90;
+        $("html, body").animate({ scrollTop: offset }, 400);
+      }
+    }
+    // If href is to another page (e.g., index.html#about), let the browser handle it
+  });
 });
